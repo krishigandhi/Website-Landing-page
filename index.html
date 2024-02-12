@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UsabilityHub | User Research & Usability Testing Platform</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media-queries.css">
 </head>
 <body>
  
@@ -17,7 +18,7 @@
         <div class="container main-nav flex">
             <a href="#" class="company-logo" alt="company-logo">
                 <img src="assets/asset 1.png"></a>
-                <div class="nav-links">
+                <div class="nav-links active" id="nav-links">
                     <ul class="flex">
                         <li><a href="#" class="hover-links">Products</a></li>
                         <li><a href="#" class="hover-link">Customer</a></li>
@@ -27,6 +28,7 @@
                         <li><a href="#" class="hover-link primary-button">Sign up</a></li>
                     </ul>
                 </div>
+                <a href="#" class="nav-toogle hover-link" id="nav-toggle"><i class="fa-solid fa-bars"></i></a>
         </div>
     </nav>
     <!-- header -->
@@ -121,7 +123,7 @@
         </div>
     </section>
     <section class="big-feature-section">
-        <div class="container flex big-feature-container" style="flex-direction: row-reverse;">
+        <div class="container flex big-feature-container" id="#second-big-feature">
                     <div class="feature-img">
                 <img src="assets/asset 21.png" alt=""></div>
                 <div class="feature-desc flex"><h4>Effortless validation for</h4>
@@ -146,7 +148,7 @@
     </section>
 
     <!-- Examples Section -->
-    <section class="examples">
+    <section class="examples-section">
         <div class="container">
             <div class="examples-header flex">
                 <h2 class="example-heading-text">One platform, endless possibilities</h2>
@@ -221,5 +223,12 @@
 
     </div></div>
     <script src="https://kit.fontawesome.com/a5e8bac05d.js" crossorigin="anonymous"></script>
+    <script>
+        const toggleButton = document.getElementById('nav-toggle');
+        const navLinks = document.getElementById('nav-links');
+        toggleButton.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        })
+    </script>
 </body>
 </html>
